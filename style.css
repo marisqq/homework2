@@ -1,0 +1,343 @@
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    height: 100vh;
+    background-color: white;
+    gap: 1vh;
+    grid-template-areas: 
+    "head"
+    "hero"
+    "body"
+    "footer";
+    
+}
+h1{
+    font-size: 5vh !important;
+}
+.rick-roll{
+    font-family: 'Caveat', cursive;
+    color: #ffffff;
+    text-decoration: unset;
+    transition: scale(1);
+}
+.rick-roll:hover{
+    font-family: 'Caveat', cursive;
+    color: white;
+    transition: scale(2);
+}
+.body{
+    display: grid;
+    grid-area: body;
+    height: 120vh;
+    width: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1vh;
+    grid-template-areas: "article"
+    
+    "advertsm"
+    "articlelist"
+    ;
+    justify-items: center;
+    align-items: center;
+}
+.facts{
+    width: 90vw;
+    height: 50vh;
+    justify-items: center;
+}
+.article-listing{
+    grid-area: article;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+}
+ .article{
+     
+    grid-area: articlelist;
+}
+.advert-small{
+    grid-area: advertsm;
+    justify-items: center;
+    height: 10vh;
+
+}
+.doggo{
+    width: 25vh;
+    
+    
+}
+.sidebar{
+    grid-area: sidebar;
+    display: none;
+    font-family: 'Caveat', cursive;
+
+    
+}
+.header{
+    background-color: black;
+    grid-area: head;
+    height: 10vh;
+    background-color: darkgoldenrod;
+}
+.header-img{
+    height: 8vh;
+}
+.cool-site{
+    text-align: center !important;
+}
+.navbar{
+    height: 10vh;
+}
+#searchglass{
+    width: 3vh;
+}
+.search-bar {
+    width: 10vh;
+    transition: width 0.4s ease-in-out;
+    border-radius: 15px;
+    background-color: darkgrey;
+    text-align: center;
+   
+  }
+  
+  .search-bar:hover {
+    width: 20vh;
+   
+  }
+.image-call{
+    background-color: pink ;
+    grid-area: hero;
+    height: 25vh;
+    border: 2px solid black;
+    padding: 2px;
+
+
+}
+.advert{
+    grid-area: advert;
+    display: none;
+    background-image: url(img/strwrscf.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    
+    font-size: 3vh;
+    
+}
+ 
+ 
+
+
+
+
+.footer{
+    height:  5vh;
+    background-color: black;
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    
+}
+@media (min-width: 576px) { 
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        height: 100vh;
+        background-color: white;
+        grid-template-areas: 
+        "head head head"
+        "hero hero hero"
+        "body body body"
+        "sidebar sidebar sidebar"
+        "footer footer footer";
+        
+        }
+        .sidebar{
+            grid-area: sidebar;
+            display: unset;
+            height:  15vh;
+            width: 100vw;
+            justify-items: center;
+            align-items: center;
+           
+     }
+     
+     .sidimg{
+         display: none;
+     }
+     .hideimg{
+         display: unset;
+         width: 5vh;
+         
+     }
+    .sidebar11{
+        padding-top: 10px;
+    }
+    .body{
+        grid-area: "body";
+        align-items: center;
+        justify-items: center;
+    }
+   
+    .doggo{
+        width: 15vw;
+    }
+    .article-listing{
+        height: 40vh;
+        
+    }
+    }
+@media (min-width: 992px) {
+    .body {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           border: 2px solid black;
+        height: 70vh;
+        grid-template-areas: "article-listing article"
+        "article-listing article"
+        "article-listing article";
+        
+    
+    }
+    
+    .main-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr ;
+        height: 100vh;
+        background-color: white;
+        grid-template-areas: 
+        "head head head"
+        "hero hero advert"
+        "body body sidebar"
+        "footer footer footer";
+        
+        }
+        .sidebar{
+            grid-area: sidebar;
+            display: unset;
+            width: 15vw;
+            height: auto;
+            text-align: center;
+            border: 2px solid black;
+            
+        }
+        .hide-img{
+            display: none;
+        }
+        .sidimg{
+            display: unset;
+            width: 6vh;
+            padding-bottom: 5vh;
+            transform: scale(1);
+        }
+        .sidimg:hover{
+            transform: scale(1.5);
+            fill: brown;
+        }
+        .sidebar11{
+            padding-top: 10px;
+        }
+        .advert{
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+            grid-area: advert;
+            display: unset;
+            height:  25vh;
+            width: 15vw;
+           padding-top: 15vh;
+           font-family: 'Fredoka One', cursive;
+            
+            
+        }
+        .cat-link{
+            background-color: white;
+            opacity: 50%;
+            color: #000000f5;
+        }
+        .cat-link:hover{
+            color: black;
+            background-color: bisque;
+            border-radius: 8px 8px 8px 8px;
+            opacity: 70%;
+           }
+     
+        .advert-small{
+            display: none;
+        }
+        .article-listing{
+            grid-area: article-listing;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+
+        }
+         .article{
+             
+            grid-area: article;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+        }
+        .facts{
+            width: 25vw;
+            height: 25vw;
+        }
+    
+
+
+ }
+/*Bootstrap Video*/
+header {
+    position: relative;
+    background-color: black;
+    height: 25vh;
+    min-height: 25vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url(img/robertnelson.jpg) black no-repeat center center scroll;
+      
+    }
+    header video {
+      display: none;
+    }
+  }
+/*Video--end----------------------------------------*/
