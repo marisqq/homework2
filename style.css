@@ -1,8 +1,10 @@
+/*------------ Mobile view------------------------------ */
 
 .main-grid{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
+    width: 100vw;
     height: 100vh;
     background-color: white;
     gap: 1vh;
@@ -14,23 +16,140 @@
     
 }
 h1{
-    font-size: 5vh !important;
+    font-size: 3.5vh !important;
+}
+.header{
+    background-color: black;
+    grid-area: head;
+    height: 10vh;
+    background-color: darkgoldenrod;
+}
+.header-img{
+    height: 8vh;
 }
 .rick-roll{
     font-family: 'Caveat', cursive;
     color: #ffffff;
     text-decoration: unset;
-    transition: scale(1);
+    
 }
 .rick-roll:hover{
     font-family: 'Caveat', cursive;
     color: white;
-    transition: scale(2);
+    
 }
-.body{
+.search-bar {
+    width: 10vh;
+    transition: width 0.4s ease-in-out;
+    border-radius: 15px;
+    background-color: darkgrey;
+    text-align: center;
+   
+  }
+  
+  .search-bar:hover {
+    width: 20vh;
+   
+  }
+
+  /* Body flexbox */
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .article-listing{
+       background-image: url(img/aabg1.jpg);
+       background-color: rgb(148, 150, 148);
+       background-repeat: no-repeat;
+        flex-direction: row;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-position: center;
+        width: 100%;
+        height: 70vh;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        font-size: 25px;
+      
+
+    }
+   
+    .article{
+        
+        font-size: 5vh;
+        background-image: url(img/abbg.jpg);
+        background-color: rgb(148, 150, 148);
+        background-blend-mode: soft-light;
+        background-repeat: no-repeat;
+         flex-direction: row;
+         background-size: cover;
+         justify-content: center;
+         background-position: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-family: 'Fredoka One', cursive;
+    }
+    .cup{
+        height: 50vh;
+        background-size: contain;
+
+        
+    }
+    .advert-small{
+        order: 1;
+        justify-items: center;
+        height: 10vh;
+    
+    }
+    .doggo{
+        width: 25vh;
+        
+        
+    }
+    .advert-small{ order: 1;}
+    .article-listing{order: 2;}
+    .article{order: 0;}
+    .hide-img{
+        display: flex;
+        justify-content: center;
+    }
+    .hideimg{
+        padding-left: 10px;
+    }
+    .desktop{
+        display: none;
+    }
+   .mobile{
+       font-size: 5vh;
+       text-align: center;
+   }
+
+    /* Body flexbox end*/
+/*------ body -----*
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .article-listing{
+        background-color: blanchedalmond;
+        flex-direction: row;
+
+    }
+    .article{
+        flex-direction: row;
+        background-color: blue;
+    }
+/*------ body end -----*/
+/*.body{
     display: grid;
     grid-area: body;
-    height: 120vh;
+    width: 100vw;
+   height: 100vh;
     width: auto;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -44,19 +163,33 @@ h1{
     align-items: center;
 }
 .facts{
-    width: 90vw;
-    height: 50vh;
+   
     justify-items: center;
 }
 .article-listing{
+    background-image: url(img/facts.jpg);
+    
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 30vh;
     grid-area: article;
     font-family: 'Caveat', cursive;
     text-align: center;
 }
- .article{
+.cool-facts::before{
+    content: "";
+}
+ .cool-facts{
+    background-image: url(img/facts.jpg);
+    
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 30vh;
      
     grid-area: articlelist;
-}
+}*/
 .advert-small{
     grid-area: advertsm;
     justify-items: center;
@@ -75,15 +208,7 @@ h1{
 
     
 }
-.header{
-    background-color: black;
-    grid-area: head;
-    height: 10vh;
-    background-color: darkgoldenrod;
-}
-.header-img{
-    height: 8vh;
-}
+
 .cool-site{
     text-align: center !important;
 }
@@ -93,24 +218,11 @@ h1{
 #searchglass{
     width: 3vh;
 }
-.search-bar {
-    width: 10vh;
-    transition: width 0.4s ease-in-out;
-    border-radius: 15px;
-    background-color: darkgrey;
-    text-align: center;
-   
-  }
-  
-  .search-bar:hover {
-    width: 20vh;
-   
-  }
+
 .image-call{
-    background-color: pink ;
+
     grid-area: hero;
     height: 25vh;
-    border: 2px solid black;
     padding: 2px;
 
 
@@ -129,8 +241,10 @@ h1{
     
 }
  
- 
-
+.hideimg{
+    display: unset;
+    width: 5vh;
+}
 
 
 
@@ -141,7 +255,10 @@ h1{
     text-align: center;
     color: white;
     
+    
 }
+/*-*------------ Mobile view end------------------------------ */
+ /* ----------------------Tablet view-------------- */
 @media (min-width: 576px) { 
     .main-grid{
         display: grid;
@@ -185,25 +302,19 @@ h1{
     }
    
     .doggo{
-        width: 15vw;
+        width: 20vw;
     }
-    .article-listing{
+    /* .article-listing{ 
         height: 40vh;
         
+    }*/
     }
-    }
+    /* ----------------------Tablet view end-------------- */
+
+
+    /* -----------------Desktop view --------------------------*/
 @media (min-width: 992px) {
-    .body {
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           border: 2px solid black;
-        height: 70vh;
-        grid-template-areas: "article-listing article"
-        "article-listing article"
-        "article-listing article";
-        
-    
-    }
+   
     
     .main-grid{
         display: grid;
@@ -218,6 +329,50 @@ h1{
         "footer footer footer";
         
         }
+         /* Body flexbox */
+    .body {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .article-listing{
+       background-image: url(img/aabg1.jpg);
+       background-color: rgb(148, 150, 148);
+       background-repeat: no-repeat;
+        flex-direction: column;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-position: center;
+        width: 50%;
+        height: 70vh;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+
+    }
+   
+    .article{
+        
+        background-image: url(img/abbg.jpg);
+        background-color: rgb(148, 150, 148);
+        background-blend-mode: soft-light;
+        background-repeat: no-repeat;
+         flex-direction: column;
+         background-size: cover;
+         justify-content: center;
+         background-position: center;
+        text-align: center;
+        width: 50%;
+        height: 70vh;
+        font-family: 'Fredoka One', cursive;
+    }
+    .cup{
+        height: 50vh;
+
+        
+    }
+  
+
+    /* Body flexbox end*/
         .sidebar{
             grid-area: sidebar;
             display: unset;
@@ -270,28 +425,37 @@ h1{
         .advert-small{
             display: none;
         }
-        .article-listing{
+        /* .article-listing{ 
+            background-image: url(img/facts.jpg);
+            background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
             grid-area: article-listing;
             text-align: center;
             font-family: 'Indie Flower', cursive;
 
+        }*/
+        .facts{
+            display: none;
         }
-         .article{
+        /* .article{
              
             grid-area: article;
             text-align: center;
             font-family: 'Indie Flower', cursive;
-        }
-        .facts{
-            width: 25vw;
-            height: 25vw;
-        }
-    
-
+        }*/
+        
+ 
 
  }
+ /* -----------------Desktop view-end --------------------------*/
+
+
+
 /*Bootstrap Video*/
 header {
+    border: 2px solid black;
+    
     position: relative;
     background-color: black;
     height: 25vh;
@@ -331,7 +495,7 @@ header {
     z-index: 1;
   }
   
-  @media (pointer: coarse) and (hover: none) {
+  @media (pointer: coarse) and (hover: none){
     header {
       background: url(img/robertnelson.jpg) black no-repeat center center scroll;
       
