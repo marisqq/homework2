@@ -4,10 +4,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
-    width: 100vw;
-    height: 100vh;
+   
+    height: auto;
     background-color: white;
-    gap: 1vh;
+    gap: 0.5px;
     grid-template-areas: 
     "head"
     "hero"
@@ -48,15 +48,17 @@ h1{
   }
   
   .search-bar:hover {
-    width: 20vh;
+    width: 15vh;
    
   }
 
   /* Body flexbox */
     .body {
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         
     }
     .article-listing{
@@ -70,6 +72,7 @@ h1{
         width: 100%;
         height: 70vh;
         text-align: center;
+        align-content: center;
         font-family: 'Fredoka One', cursive;
         font-size: 25px;
       
@@ -86,6 +89,7 @@ h1{
          flex-direction: row;
          background-size: cover;
          justify-content: center;
+         align-content: center;
          background-position: center;
         text-align: center;
         width: 100%;
@@ -98,10 +102,13 @@ h1{
 
         
     }
+    .text{
+        font-size: 15px;
+    }
     .advert-small{
         order: 1;
-        justify-items: center;
-        height: 10vh;
+       
+        height: 30vh;
     
     }
     .doggo{
@@ -190,18 +197,14 @@ h1{
      
     grid-area: articlelist;
 }*/
-.advert-small{
-    grid-area: advertsm;
-    justify-items: center;
-    height: 10vh;
 
-}
 .doggo{
     width: 25vh;
     
     
 }
 .sidebar{
+    width: auto;
     grid-area: sidebar;
     display: none;
     font-family: 'Caveat', cursive;
@@ -220,41 +223,38 @@ h1{
 }
 
 .image-call{
-
+    
     grid-area: hero;
     height: 25vh;
-    padding: 2px;
+    
 
 
 }
-.advert{
-    grid-area: advert;
-    display: none;
-    background-image: url(img/strwrscf.jpg);
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-align: center;
-    
-    
-    font-size: 3vh;
-    
-}
+
  
 .hideimg{
-    display: unset;
+    display: none;
     width: 5vh;
 }
 
 
 
 .footer{
+    width:auto;
+
     height:  5vh;
     background-color: black;
     grid-area: footer;
     text-align: center;
     color: white;
     
+    
+}
+.advert{
+    display: none;
+}
+.advert-middle{
+    display: none;
     
 }
 /*-*------------ Mobile view end------------------------------ */
@@ -264,7 +264,8 @@ h1{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto;
-        height: 100vh;
+        height: auto;
+        width:auto;
         background-color: white;
         grid-template-areas: 
         "head head head"
@@ -274,15 +275,102 @@ h1{
         "footer footer footer";
         
         }
-        .sidebar{
-            grid-area: sidebar;
-            display: unset;
-            height:  15vh;
-            width: 100vw;
-            justify-items: center;
-            align-items: center;
-           
-     }
+        
+      /* Body flexbox */
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .article-listing{
+       background-image: url(img/aabg1.jpg);
+       background-color: rgb(148, 150, 148);
+       background-repeat: no-repeat;
+        flex-direction: row;
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        font-size: 25px;
+        color: white;
+      
+
+    }
+   
+    .article{
+        
+        font-size: 5vh;
+        background-image: url(img/abbg.jpg);
+        background-color: rgb(148, 150, 148);
+        background-blend-mode: soft-light;
+        background-repeat: no-repeat;
+         flex-direction: row;
+         background-size: cover;
+         justify-content: center;
+         background-position: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-family: 'Fredoka One', cursive;
+        color: white;
+    }
+    .cup{
+        height: 40vh;
+        background-size: contain;
+
+        
+    }
+    
+  
+    
+    .article-listing{order: 2;}
+    .article{order: 1;}
+    .hide-img{
+        display: flex;
+        justify-content: center;
+    }
+    .hideimg{
+        padding-left: 10px;
+    }
+    .desktop{
+        display: none;
+    }
+   .mobile{
+       font-size: 5vh;
+       text-align: center;
+   }
+   .cool-facts{
+      display: grid;
+      grid-template-columns: 80% 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "cup ad";
+      
+   }
+  .cup{
+      grid-area: cup;
+      justify-self: center;
+      
+      
+  }
+  .advert-middle{
+      grid-area: ad;
+      justify-self: end;
+
+  }
+
+   .doggo{
+       width: 100px;
+    
+       
+   }
+  
+   
+
+    /* Body flexbox end*/
      
      .sidimg{
          display: none;
@@ -300,10 +388,29 @@ h1{
         align-items: center;
         justify-items: center;
     }
-   
-    .doggo{
-        width: 20vw;
-    }
+    .sidebar{
+        grid-area: sidebar;
+        display: unset;
+        height:  15vh;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+       
+ }
+ .advert-small{
+     display: none;
+ }
+ .footer{
+    width:auto;
+    height:  5vh;
+    background-color: black;
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    
+    
+}
+    
     /* .article-listing{ 
         height: 40vh;
         
@@ -319,8 +426,9 @@ h1{
     .main-grid{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr ;
-        height: 100vh;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+        height: 100%;
+        width: 100%;
         background-color: white;
         grid-template-areas: 
         "head head head"
@@ -331,11 +439,13 @@ h1{
         }
          /* Body flexbox */
     .body {
+        grid-area: body;
         display: flex;
         flex-direction: row;
-        
+        width: 1fr;
     }
     .article-listing{
+        
        background-image: url(img/aabg1.jpg);
        background-color: rgb(148, 150, 148);
        background-repeat: no-repeat;
@@ -343,11 +453,11 @@ h1{
         background-size: cover;
         background-blend-mode: soft-light;
         background-position: center;
-        width: 50%;
-        height: 70vh;
+        width: 70%;
+        height: 100%;
         text-align: center;
         font-family: 'Fredoka One', cursive;
-
+        font-size: 15px;
     }
    
     .article{
@@ -362,12 +472,25 @@ h1{
          background-position: center;
         text-align: center;
         width: 50%;
-        height: 70vh;
+        
         font-family: 'Fredoka One', cursive;
     }
     .cup{
         height: 50vh;
 
+        
+    }
+    .advert{
+        grid-area: advert;
+        display: unset;
+        background-image: url(img/strwrscf.jpg);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-align: center;
+        
+        
+        font-size: 3vh;
         
     }
   
@@ -376,7 +499,7 @@ h1{
         .sidebar{
             grid-area: sidebar;
             display: unset;
-            width: 15vw;
+            width: auto;
             height: auto;
             text-align: center;
             border: 2px solid black;
@@ -399,12 +522,11 @@ h1{
             padding-top: 10px;
         }
         .advert{
-            grid-template-columns: 1fr 1fr;
-            display: grid;
+           
             grid-area: advert;
             display: unset;
-            height:  25vh;
-            width: 15vw;
+            height:  20vh;
+            width: auto;
            padding-top: 15vh;
            font-family: 'Fredoka One', cursive;
             
@@ -425,6 +547,7 @@ h1{
         .advert-small{
             display: none;
         }
+       
         /* .article-listing{ 
             background-image: url(img/facts.jpg);
             background-size: contain;
@@ -454,13 +577,13 @@ h1{
 
 /*Bootstrap Video*/
 header {
-    border: 2px solid black;
     
+    margin-left: 1px;
     position: relative;
     background-color: black;
     height: 25vh;
     min-height: 25vh;
-    width: 100%;
+    
     overflow: hidden;
   }
   
@@ -470,7 +593,7 @@ header {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     z-index: 0;
     -ms-transform: translateX(-50%) translateY(-50%);
