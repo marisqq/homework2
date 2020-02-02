@@ -15,6 +15,9 @@
     "footer";
     
 }
+.brand{
+    width: 10vh;
+}
 h1{
     font-size: 3.5vh !important;
 }
@@ -31,6 +34,7 @@ h1{
     font-family: 'Caveat', cursive;
     color: #ffffff;
     text-decoration: unset;
+    font-size: 50px;
     
 }
 .rick-roll:hover{
@@ -359,6 +363,7 @@ h1{
   .advert-middle{
       grid-area: ad;
       justify-self: end;
+      display: unset;
 
   }
 
@@ -439,6 +444,7 @@ h1{
         }
          /* Body flexbox */
     .body {
+        padding: 1px;
         grid-area: body;
         display: flex;
         flex-direction: row;
@@ -447,7 +453,7 @@ h1{
     .article-listing{
         
        background-image: url(img/aabg1.jpg);
-       background-color: rgb(148, 150, 148);
+       background-color: rgb(22, 24, 22);;
        background-repeat: no-repeat;
         flex-direction: column;
         background-size: cover;
@@ -457,14 +463,20 @@ h1{
         height: 100%;
         text-align: center;
         font-family: 'Fredoka One', cursive;
-        font-size: 15px;
+        font-size: 20px;
+        color: white;
+    }
+    .text{
+        padding-top: 40px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
    
     .article{
         
         background-image: url(img/abbg.jpg);
-        background-color: rgb(148, 150, 148);
-        background-blend-mode: soft-light;
+        background-color: rgb(39, 133, 39);
+        background-blend-mode: darken;
         background-repeat: no-repeat;
          flex-direction: column;
          background-size: cover;
@@ -492,6 +504,15 @@ h1{
         
         font-size: 3vh;
         
+    }
+    .advert-middle{
+        grid-area: ad;
+        justify-self: end;
+        display: none;
+  
+    }
+    .cool-facts{
+        display: contents;
     }
   
 
@@ -522,10 +543,10 @@ h1{
             padding-top: 10px;
         }
         .advert{
-           
+            border: 2px solid black;
             grid-area: advert;
             display: unset;
-            height:  20vh;
+            height:  25vh;
             width: auto;
            padding-top: 15vh;
            font-family: 'Fredoka One', cursive;
@@ -578,7 +599,7 @@ h1{
 /*Bootstrap Video*/
 header {
     
-    margin-left: 1px;
+    padding: 1px;
     position: relative;
     background-color: black;
     height: 25vh;
@@ -618,9 +639,10 @@ header {
     z-index: 1;
   }
   
-  @media (pointer: coarse) and (hover: none){
+  @media (max-width: 576px) {
     header {
       background: url(img/robertnelson.jpg) black no-repeat center center scroll;
+      
       
     }
     header video {
